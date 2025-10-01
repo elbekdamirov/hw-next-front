@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import SeeMore from "./SeeMore";
 
 interface Props {
   data: any[];
@@ -13,7 +14,7 @@ const ProductsView: FC<Props> = ({ data }) => {
     <div className="container">
       <h2 className="text-2xl font-bold mb-6">Products</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {data.map((product) => (
+        {data?.map((product) => (
           <div
             key={product.id}
             className="border rounded-lg p-4 bg-white shadow flex flex-col"
@@ -28,6 +29,7 @@ const ProductsView: FC<Props> = ({ data }) => {
               {product.description}
             </p>
             <span className="mt-3 font-bold text-lg">${product.price}</span>
+            <SeeMore id={product.id} />
           </div>
         ))}
       </div>

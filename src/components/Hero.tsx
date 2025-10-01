@@ -8,7 +8,7 @@ const Hero = () => {
       <p className="text-lg mb-8 max-w-xl text-gray-300">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
         earum consectetur et eius, nulla iste corrupti odit repellat
-        consequuntur amet.  
+        consequuntur amet.
       </p>
 
       <div className="flex gap-4">

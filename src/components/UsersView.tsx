@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import SeeMore from "./SeeUserMore";
 
 interface Props {
   data: any[];
@@ -23,6 +24,7 @@ const UsersView: FC<Props> = ({ data }) => {
             </span>
             <span className="text-gray-600 text-sm">{user.email}</span>
             <span className="text-gray-500 text-sm">{user.phone}</span>
+            <SeeMore id={user.id} />
           </li>
         ))}
       </ul>
